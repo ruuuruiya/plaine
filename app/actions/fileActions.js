@@ -225,7 +225,7 @@ export async function updateMedicalFile(formData) {
             label = "",
             summary = ""
         } = JSON.parse(data);
-        if (!file_id, !name.trim()) throw new Error("Invalid Request Body");
+        if (!file_id || !name.trim()) throw new Error("Invalid Request Body");
 
         await connectDB();
 

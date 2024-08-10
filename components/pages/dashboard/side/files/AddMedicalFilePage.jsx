@@ -87,7 +87,6 @@ const AddMedicalFilePage = () => {
         } catch (err) {
             setErrorFile(err.message);
             setLoadFile(false);
-            return;
         } finally {
             e.target.value = '';
         };

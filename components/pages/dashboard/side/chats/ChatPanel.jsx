@@ -166,6 +166,6 @@ const ChatPanel = ({ loading, input, setInput, files, setFiles, totalFiles, hand
             </div>
         </>
     )
-}
+};
 
 export default ChatPanel;

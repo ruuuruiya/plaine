@@ -1,7 +1,6 @@
 import { PLAN_STATUS } from '@/lib/globals'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
-import React from 'react'
 
 const Planning = ({ plans }) => {
 
@@ -43,9 +42,8 @@ const Planning = ({ plans }) => {
                     </>
                 )}
             </div>
-
         </div>
     )
-}
+};
 
-export default Planning
+export default Planning;

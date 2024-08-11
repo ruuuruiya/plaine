@@ -201,6 +201,6 @@ const EditProfilePage = ({ initialRecords }) => {
             />}
         </div>
     )
-}
+};
 
 export default EditProfilePage;

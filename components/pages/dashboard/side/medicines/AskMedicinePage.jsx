@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { useImageUpload } from '@/lib/hooks/useImageUpload';
 import { FiUploadCloud } from 'react-icons/fi';
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/react';
@@ -111,7 +111,7 @@ const AskMedicinePage = ({ medicineLists, session }) => {
                                 }}
                                 onChange={(e) => setQuery(e.target.value)}
                                 className={" w-full p-3 pr-10 rounded-lg focus:outline-none placeholder:text-neutral-500 border border-neutral-400 focus:border-neutral-950 bg-white text-black"}
-                                placeholder='Search my medicine...'
+                                placeholder='Search medicines...'
                             />
 
                             <ComboboxButton className="group absolute inset-y-0 right-1 px-2.5 top-8 ">
@@ -258,6 +258,6 @@ const AskMedicinePage = ({ medicineLists, session }) => {
             </div>
         </div>
     )
-}
+};
 
-export default AskMedicinePage
+export default AskMedicinePage;

@@ -160,6 +160,6 @@ const ProfilePage = ({ initialRecords }) => {
             </div>
         </div>
     )
-}
+};
 
-export default ProfilePage
+export default ProfilePage;

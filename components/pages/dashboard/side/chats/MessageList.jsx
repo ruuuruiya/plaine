@@ -100,6 +100,6 @@ const MessageList = ({ messages, session, loading = false }) => {
         </div>
     </>
     )
-}
+};
 
 export default MessageList;

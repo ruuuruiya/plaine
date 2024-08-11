@@ -58,4 +58,4 @@ const HealthDescription = ({ description, setStatus, setDescription }) => {
     )
 };
 
-export default HealthDescription
+export default HealthDescription;

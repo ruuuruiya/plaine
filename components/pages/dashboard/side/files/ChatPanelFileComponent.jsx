@@ -45,6 +45,6 @@ const ChatPanelFileComponent = ({ loading, input, setInput, handleSubmit }) => {
             </div>
         </>
     )
-}
+};
 
 export default ChatPanelFileComponent;

@@ -86,7 +86,6 @@ const OnboardingPage = ({ initialUsername }) => {
             setLoading(false);
             setNotif({ active: true, message: err.message, status: -1 });
         };
-
     };
 
     const handleStepBack = () => {

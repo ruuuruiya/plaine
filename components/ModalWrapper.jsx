@@ -59,6 +59,7 @@ const ModalWrapper = ({ children }) => {
 
                     </div>
 
+                    {/* Backdrop */}
                     { !confirmationLoading && showModal.backdrop &&
                         <form
                             onSubmit={(e) => {
@@ -74,6 +75,6 @@ const ModalWrapper = ({ children }) => {
             )}
         </ModalContext.Provider>
     )
-}
+};
 
-export default ModalWrapper
+export default ModalWrapper;

@@ -3,7 +3,7 @@
 import { updatePotentialHealthIssues } from '@/app/actions/userActions'
 import { NotifContext } from '@/components/NotifWrapper'
 import { LoadingGenerate } from '@/components/Utils'
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import Markdown from 'react-markdown'
 
 const PotentialHealthIssues = ({ healthIssues, setHealthIssues }) => {
@@ -57,6 +57,6 @@ const PotentialHealthIssues = ({ healthIssues, setHealthIssues }) => {
 
         </div>
     )
-}
+};
 
-export default PotentialHealthIssues
+export default PotentialHealthIssues;

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ModalContext } from '@/components/ModalWrapper'
@@ -21,7 +21,7 @@ const MedicinePage = ({ initialMedicines }) => {
 
     const handleDelete = async (med_id) => {
         try {
-            if (!med_id) throw new Error("Medicine Not Found!");
+            if (!med_id) throw new Error("Medicine Not Found");
             setConfirmationLoading(true);
             const res = await removeMedicine(med_id);
             if (res?.success) {
@@ -88,9 +88,9 @@ const MedicinePage = ({ initialMedicines }) => {
 
         </div>
     )
-}
+};
 
-export default MedicinePage
+export default MedicinePage;
 
 const MedDetails = ({ med, handleDelete }) => {
 

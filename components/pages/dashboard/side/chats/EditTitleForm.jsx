@@ -85,6 +85,6 @@ const EditTitleForm = ({ chat_id, prevTitle, setChatLists = () => {}, setTitle =
             </form>
         </>
     )
-}
+};
 
 export default EditTitleForm;

@@ -43,7 +43,7 @@ const MedicalFilePage = ({ initialFiles }) => {
 
     return (
         <div className='p-5 flex flex-col gap-5'>
-            <PageTitle title={"Medical Files"} description={"Talk with medical file with AI"} />
+            <PageTitle title={"Medical Files"} description={"Talk to medical file with AI"} />
 
             <div className="flex gap-2 items-center">
                 <div className="w-full relative">
@@ -147,7 +147,7 @@ const FileAsk = ({ files }) => {
                         }}
                         onChange={(e) => setQuery(e.target.value)}
                         className={`z-[100000] ${errorSelected && "border-red-500"} w-full p-3 pr-10 rounded-lg focus:outline-none placeholder:text-neutral-500 border border-neutral-400 focus:border-neutral-950 bg-white text-black`}
-                        placeholder='Search my file...'
+                        placeholder='Search files...'
                     />
 
                     <ComboboxButton className="group absolute inset-y-0 right-2 px-2.5">
@@ -258,4 +258,4 @@ const FileDetails = ({ file, handleDelete }) => {
 
         </div>
     )
-}
+};

@@ -281,7 +281,7 @@ const Step4 = ({
 
         </div>
     )
-}
+};
 
 const Step3 = ({
 

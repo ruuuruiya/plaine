@@ -51,7 +51,7 @@ const EditMedicinePage = ({ initialMedicine }) => {
         setSideEffects(initialMedicine.side_effects);
         setPreviewUrl(initialMedicine.image);
         setImage(initialMedicine.image);
-    }, []);
+    }, [initialMedicine]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

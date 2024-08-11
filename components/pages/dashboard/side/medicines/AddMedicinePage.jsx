@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { useImageUpload } from '@/lib/hooks/useImageUpload';
 import { postMedicine } from '@/app/actions/medicineActions';
 import { NotifContext } from '@/components/NotifWrapper';
@@ -71,7 +71,7 @@ const AddMedicinePage = () => {
                 router.replace('/medicines');
                 setConfirmationLoading(false);
                 setShowModal({ active: false });
-                setNotif({ active: true, message: "Medicine Created", status: 1 });
+                setNotif({ active: true, message: "Medicine Uploaded", status: 1 });
             }else {
                 throw new Error(res.message);
             };
@@ -111,6 +111,6 @@ const AddMedicinePage = () => {
             />
         </div>
     )
-}
+};
 
-export default AddMedicinePage
+export default AddMedicinePage;

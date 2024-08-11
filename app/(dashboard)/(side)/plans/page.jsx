@@ -1,14 +1,12 @@
-import PlanPage from "@/components/pages/dashboard/side/plans/PlanPage"
+import PlanPage from "@/components/pages/dashboard/side/plans/PlanPage";
 
 export const metadata = {
-  title: 'Planning',
-  description: 'Make your health plan',
+    title: "Planning",
+    description: "Make your health plan",
 };
 
 const Page = () => {
-  return (
-    <PlanPage />
-  )
-}
+    return <PlanPage />;
+};
 
-export default Page
+export default Page;

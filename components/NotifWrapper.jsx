@@ -20,6 +20,6 @@ const NotifWrapper = ({ children }) => {
             )}
         </NotifContext.Provider>
     )
-}
+};
 
-export default NotifWrapper
+export default NotifWrapper;

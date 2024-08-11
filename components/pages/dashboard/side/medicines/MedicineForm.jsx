@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import Image from 'next/image';
 import { FiUploadCloud } from "react-icons/fi";
 import { FREQUENCY_OPTIONS } from '@/lib/globals';
@@ -515,4 +515,4 @@ const ReviewMedicine = ({ med }) => {
 
         </div>
     )
-}
+};

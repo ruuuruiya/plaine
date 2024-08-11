@@ -132,6 +132,6 @@ const ChatFileComponent = ({ file_id, initialName = "", initialMessages = [], se
             />
         </>
     )
-}
+};
 
 export default ChatFileComponent;

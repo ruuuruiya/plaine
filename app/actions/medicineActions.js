@@ -121,6 +121,7 @@ export async function removeMedicine(med_id) {
 
         // Get Old Image
         const oldImage = await Medicine.findOne({ user_id, med_id }).select('image').lean();
+        if (!oldImage) throw new Error("Medicine Not Found");
         const oldImageUrl = oldImage.image;
         const oldFilename = "medicines/" + oldImageUrl.split('/').pop();
 

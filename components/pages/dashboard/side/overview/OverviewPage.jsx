@@ -50,6 +50,6 @@ const OverviewPage = ({ plainUser }) => {
             </div>
         </div>
     )
-}
+};
 
 export default OverviewPage;

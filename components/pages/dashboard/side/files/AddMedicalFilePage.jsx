@@ -291,7 +291,7 @@ const AddMedicalFilePage = () => {
                 router.replace('/files');
                 setConfirmationLoading(false);
                 setShowModal({ active: false });
-                setNotif({ active: true, message: "File Created", status: 1 });
+                setNotif({ active: true, message: "File Uploaded", status: 1 });
             }else {
                 throw new Error(res.message);
             };

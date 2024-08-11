@@ -4,12 +4,11 @@ import connectDB from "@/config/db";
 import File from "@/models/fileSchema";
 
 export const metadata = {
-    title: 'Medical File',
-    description: 'Manage your file',
+    title: "Medical File",
+    description: "Manage your file",
 };
 
 const Page = async () => {
-
     const auth_session = await auth();
     const user_id = auth_session?.user?.user_id;
 

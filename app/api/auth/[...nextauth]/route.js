@@ -1,7 +1,7 @@
 import connectDB from "@/config/db";
 import { nanoid } from "@/lib/utils";
 import User from "@/models/userSchema";
-import NextAuth from "next-auth"
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -9,8 +9,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
-        })
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        }),
     ],
     session: {
         strategy: "jwt",
@@ -20,8 +20,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         maxAge: 60 * 60 * 24 * 30,
     },
     pages: {
-        signIn: '/login',
-        signOut: '/',
+        signIn: "/login",
+        signOut: "/",
     },
     callbacks: {
         async signIn({ user }) {
@@ -36,12 +36,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         username: user.name,
                         is_first_login: true,
                     });
-                };
+                }
                 return true;
             } catch (err) {
                 console.error("SignIn Error:", err);
                 return false;
-            };
+            }
         },
         async jwt({ token, user, account }) {
             if (account) {
@@ -51,8 +51,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     token.user_id = userDB.user_id;
                 } catch (err) {
                     console.error("JWT Error:", err);
-                };
-            };
+                }
+            }
             return token;
         },
         async session({ session, token }) {
@@ -60,6 +60,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             return session;
         },
     },
-})
+});
 
-export const { GET, POST } = handlers
+export const { GET, POST } = handlers;

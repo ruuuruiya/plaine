@@ -1,14 +1,12 @@
-import AddMedicinePage from '@/components/pages/dashboard/side/medicines/AddMedicinePage'
+import AddMedicinePage from "@/components/pages/dashboard/side/medicines/AddMedicinePage";
 
 export const metadata = {
-  title: 'New Medicine',
-  description: 'Create New Medicine',
+    title: "New Medicine",
+    description: "Create New Medicine",
 };
 
 const page = () => {
-  return (
-    <AddMedicinePage />
-  )
-}
+    return <AddMedicinePage />;
+};
 
-export default page
+export default page;

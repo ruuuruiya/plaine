@@ -3,10 +3,8 @@
 import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
 
 const TopMenu = ({ user, openSidebarDesktop, setOpenSidebarDesktop, openSidebarMobile, setOpenSidebarMobile}) => {
-
     return (
         <div className="h-16 flex items-center justify-between px-5 border-b-2 relative">
             <button className="" onClick={() => { setOpenSidebarDesktop(!openSidebarDesktop); setOpenSidebarMobile(!openSidebarMobile) }} >
@@ -43,6 +41,6 @@ const TopMenu = ({ user, openSidebarDesktop, setOpenSidebarDesktop, openSidebarM
             </div>
         </div>
     )
-}
+};
 
-export default TopMenu
+export default TopMenu;

@@ -6,10 +6,11 @@ import ModalWrapper from "@/components/ModalWrapper";
 
 export const metadata = {
     title: {
-      template: `%s | Plaine`,
-      default: `Plaine - Simplifying Your Health Journey`,
+        template: `%s | Plaine`,
+        default: `Plaine - Simplify Your Health Journey`,
     },
-    description: "Plaine is your all-in-one AI health companion, revolutionizing personal healthcare. Provides health status updates, personalized recommendations, and potential health issues based on your interactions with the application. With Plaine, you can instantly communicate with AI for medical advice, understand complex medicine details and medical reports, and create tailored health plans. By integrating cutting-edge AI into every aspect, Plaine offers 24/7 access to personalized healthcare insights, making it easier than ever to take control of your well-being and make informed health decisions.",
+    description:
+        "Plaine is your all-in-one AI health companion, revolutionizing personal healthcare. Provides health status updates, personalized recommendations, and potential health issues based on your interactions with the application. With Plaine, you can instantly communicate with AI for medical advice, understand complex medicine details and medical reports, and create tailored health plans. By integrating cutting-edge AI into every aspect, Plaine offers 24/7 access to personalized healthcare insights, making it easier than ever to take control of your well-being and make informed health decisions.",
 };
 
 const RootLayout = async ({ children }) => {
@@ -19,7 +20,7 @@ const RootLayout = async ({ children }) => {
                 <SessionProvider>
                     <NotifWrapper>
                         <ModalWrapper>
-                            { children }
+                            {children}
                         </ModalWrapper>
                     </NotifWrapper>
                 </SessionProvider>

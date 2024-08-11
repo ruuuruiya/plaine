@@ -5,12 +5,11 @@ import Chat from "@/models/chatSchema";
 import { redirect } from "next/navigation";
 
 export const metadata = {
-    title: 'Chat',
-    description: 'Chat with AI',
+    title: "Chat",
+    description: "Chat with AI",
 };
 
 const Page = async ({ params: { chat_id } }) => {
-
     const auth_session = await auth();
     const user_id = auth_session?.user?.user_id;
 

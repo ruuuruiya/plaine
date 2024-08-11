@@ -56,7 +56,7 @@ const EditMedicalFilePage = ({ initialFile }) => {
         setLabel(initialFile.label);
         setSummary(initialFile.summary);
         setType(initialFile.type);
-    }, []);
+    }, [initialFile]);
 
     const handleName = (e) => {
         const inputText = e.target.value;

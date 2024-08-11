@@ -131,6 +131,6 @@ const ChatListPage = ({ initialChatLists }) => {
 
         </div>
     )
-}
+};
 
-export default ChatListPage
+export default ChatListPage;

@@ -63,4 +63,4 @@ const Stepper = ({ step, stepArr }) => {
     )
 };
 
-export { PoweredBy, LoadingGenerate, LoadingPage, PageTitle, Stepper }
+export { PoweredBy, LoadingGenerate, LoadingPage, PageTitle, Stepper };

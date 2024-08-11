@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { Tilt } from 'react-tilt'
 
 const Side = () => {
-
-
     return (
         <div className="bg-dot-black/35 w-full flex flex-col items-center relative">
             <div className="max-w-[70rem] w-full flex md:flex-row flex-col gap-10 pb-32 pt-10 px-5 relative">
@@ -37,6 +35,6 @@ const Side = () => {
             </div>
         </div>
     )
-}
+};
 
-export default Side
+export default Side;

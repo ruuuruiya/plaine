@@ -32,6 +32,6 @@ const SettingsPage = ({ email }) => {
             </div>
         </div>
     )
-}
+};
 
-export default SettingsPage
+export default SettingsPage;

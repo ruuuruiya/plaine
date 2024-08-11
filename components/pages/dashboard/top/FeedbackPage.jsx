@@ -64,6 +64,6 @@ const FeedbackPage = () => {
             </form>
         </div>
     )
-}
+};
 
-export default FeedbackPage
+export default FeedbackPage;

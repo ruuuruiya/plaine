@@ -17,7 +17,7 @@ const Page = async () => {
     if (!auth_session) redirect("/");
     const user_id = auth_session?.user?.user_id;
 
-    // Get Data
+    // Get Personal Information
     await connectDB();
     const [user, plan] = await Promise.all([
         await User.findOne({ user_id }).select("recommendations health_issues health_status last_login").lean(),
@@ -30,7 +30,7 @@ const Page = async () => {
     const sortedPlans = filteredPlans?.sort((a, b) => {
         if (a.column !== b.column) {
             return parseInt(b.column) - parseInt(a.column);
-        }
+        };
         return parseInt(b.status) - parseInt(a.status);
     });
     const shownPlans = sortedPlans?.slice(0, 3) || [];

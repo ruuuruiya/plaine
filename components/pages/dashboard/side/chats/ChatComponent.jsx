@@ -198,7 +198,7 @@ const ChatComponent = ({ chat_id, initialMessages = [], initialFiles = [], initi
             />
         </>
     )
-}
+};
 
 export default ChatComponent;
 
@@ -223,4 +223,4 @@ const DisplayFiles = ({ totalFiles }) => {
             }
         </div>
     )
-}
+};

@@ -287,6 +287,7 @@ export async function removeFile(file_id) {
         // Get File
         await connectDB();
         const oldData = await File.findOne({ user_id, file_id }).lean();
+        if (!oldData) throw new Error("File Not Found");
         const oldFilename = "files/pdf/" + oldData.file_url.split('/').pop();
         const oldCoverName = oldData?.cover_url ? "files/cover/" + oldData.cover_url.split('/').pop() : "";
         const oldVisionUrls = oldData?.vision_urls;

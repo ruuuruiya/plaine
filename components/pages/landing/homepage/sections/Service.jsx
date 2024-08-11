@@ -1,46 +1,9 @@
 "use client"
 
-import React, { useRef } from 'react'
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from 'next/image';
-
 import { Tilt } from 'react-tilt'
 
 const Service = () => {
-
-    const container = useRef();
-    const container2 = useRef();
-
-    useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(container.current.children, {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power4.inOut",
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: container.current,
-                start: "top 80%",
-                end: "bottom 80%",
-            }
-        });
-        gsap.from(container2.current.children, {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power4.inOut",
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: container2.current,
-                start: "top 80%",
-                end: "bottom 80%",
-            }
-        });
-    })
-
     return (
         <div id='services' className="bg-dot-black/35 w-full flex flex-col items-center relative">
             <div className="max-w-[70rem] w-full flex flex-col gap-5 py-20 px-5 relative ">
@@ -52,7 +15,7 @@ const Service = () => {
 
                 <div className="w-full flex justify-between gap-5 flex-col p-5 ">
 
-                    <div ref={container} className="flex gap-5 flex-col md:flex-row">
+                    <div className="flex gap-5 flex-col md:flex-row">
                         <Tilt className="w-full p-5 flex flex-col gap-2 items-center">
                             <Image src={"/assets/icons/1_service.png"} width={512} height={512} alt='img' className='mb-4 select-none w-20'/>
                             <h4 className='text-2xl font-extrabold text-purple-600'>ADVISOR</h4>
@@ -73,7 +36,7 @@ const Service = () => {
                         </Tilt>
                     </div>
 
-                    <div ref={container2} className="flex gap-5 flex-col md:flex-row">
+                    <div className="flex gap-5 flex-col md:flex-row">
                         <Tilt className="w-full p-5 flex flex-col gap-2 items-center">
                             <Image src={"/assets/icons/5_service.png"} width={512} height={512} alt='img' className='mb-4 select-none w-20'/>
                             <h4 className='text-2xl font-extrabold text-orange-600'>ORGANIZE</h4>

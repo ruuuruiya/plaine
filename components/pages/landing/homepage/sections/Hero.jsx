@@ -8,40 +8,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Hero = ({ session }) => {
-    const text = useRef();
-    const object = useRef();
+
     const obj1 = useRef();
     const obj2 = useRef();
 
     useGSAP(() => {
-        gsap.fromTo(
-            text.current,
-            {
-                ease: "bounce.in",
-                x: -500,
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                x: 0,
-            }
-        );
-
-        gsap.fromTo(
-            object.current,
-            {
-                ease: "bounce.in",
-                x: 500,
-                opacity: 0,
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                x: 0,
-            }
-        );
-
         gsap.to(obj1.current, {
             y: -20,
             repeat: -1,
@@ -65,7 +36,6 @@ const Hero = ({ session }) => {
 
                 {/* Text */}
                 <div
-                    ref={text}
                     className="flex flex-col gap-8 justify-center w-full z-20"
                 >
                     <h1 className="flex flex-col gap-2 text-5xl md:text-6xl font-extrabold leading-tight">
@@ -124,7 +94,6 @@ const Hero = ({ session }) => {
 
                 {/* Object */}
                 <div
-                    ref={object}
                     className="flex w-full justify-center relative "
                 >
                     <Image
@@ -146,21 +115,21 @@ const Hero = ({ session }) => {
                         </div>
                     </div>
 
-                    <div ref={obj1} class="absolute bg-white left-10 -z-10 top-36 -rotate-6 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg border border-neutral-400 p-4">
+                    <div ref={obj1} className="absolute bg-white left-10 -z-10 top-36 -rotate-6 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg border border-neutral-400 p-4">
                         <Image src={"/assets/icons/drug.png"} width={445} height={445} alt="drugs" className="w-28 aspect-square rounded-xl border border-neutral-300 "/>
-                        <h2 class="text-sm font-bold mt-2">My Drugs</h2>
-                        <div class="flex flex-col justify-between h-full gap-2">
-                            <p class="text-xs ">Use Case</p>
-                            <p class="text-xs text-neutral-400">1x/Day</p>
+                        <h2 className="text-sm font-bold mt-2">My Drugs</h2>
+                        <div className="flex flex-col justify-between h-full gap-2">
+                            <p className="text-xs ">Use Case</p>
+                            <p className="text-xs text-neutral-400">1x/Day</p>
                         </div>
                     </div>
 
-                    <div ref={obj2} class="absolute bg-white right-2 top-52 rotate-12 scale-110 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg break-words border border-neutral-400 p-4">
+                    <div ref={obj2} className="absolute bg-white right-2 top-52 rotate-12 scale-110 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg break-words border border-neutral-400 p-4">
                         <div className="w-32 aspect-square rounded-xl border border-neutral-300 flex items-center justify-center">
                             <Image src={"/assets/icons/folders.png"} width={445} height={445} alt="drugs" className="w-20"/>
                         </div>
-                        <h2 class="text-sm font-bold mt-2">Medical Report</h2>
-                        <p class="text-xs text-neutral-400 mt-2">13 pages</p>
+                        <h2 className="text-sm font-bold mt-2">Medical Report</h2>
+                        <p className="text-xs text-neutral-400 mt-2">13 pages</p>
                     </div>
 
                     <div className="absolute scale-50 opacity-40 -rotate-12 top-96">

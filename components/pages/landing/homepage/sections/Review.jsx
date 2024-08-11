@@ -1,30 +1,28 @@
 "use client"
 
-import React from 'react'
-
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import horizontalLoop from '../helpers/horizontalLoop';
 import Image from 'next/image';
 
 const RIGHT_REVIEW = [
-    { id: 1, name: "Jennifer Thompson", tag: "@jen_t", profile: "/assets/images/reviews/girl1.jpg", message: `Plaine's AI Health Consult has been an absolute lifesaver. The 24/7 medical insights are incredibly helpful! 🌟` },
-    { id: 2, name: "David Miller", tag: "@dave_m", profile: "/assets/images/reviews/boy1.jpg", message: `The personalized recommendations from Plaine have made a huge difference in my diet and exercise routine.` },
-    { id: 3, name: "Sarah Jackson", tag: "@sjackson", profile: "/assets/images/reviews/girl2.jpg", message: `Plaine's Health Status Monitor keeps me informed and motivated. Highly recommended! 👍` },
-    { id: 4, name: "Kevin Roberts", tag: "@kevin_r", profile: "/assets/images/reviews/boy2.jpg", message: `I've tried several health apps, but Plaine's Medicine Tracker stands out for its simplicity and effectiveness. Kudos! 👏` },
-    { id: 5, name: "Emily Davis", tag: "@em_davis", profile: "/assets/images/reviews/girl3.jpg", message: `Plaine's Medical Report Analysis has streamlined my health management significantly.` },
-    { id: 6, name: "Jason Adams", tag: "@jasonA", profile: "/assets/images/reviews/boy3.jpg", message: `Plaine's AI-powered health insights have exceeded our expectations. They truly understand our needs.` },
-    { id: 7, name: "Jessica White", tag: "@jess_w", profile: "/assets/images/reviews/girl4.jpg", message: `Plaine's personalized health approach sets them apart. They genuinely care about their users' wellbeing 🚀.` },
+    { id: 1, name: "Jennifer Thompson", tag: "@jen_t", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine's AI Health Consult has been an absolute lifesaver. The 24/7 medical insights are incredibly helpful! 🌟` },
+    { id: 2, name: "David Miller", tag: "@dave_m", profile: "/assets/images/logo_black_white_circle.png", message: `The personalized recommendations from Plaine have made a huge difference in my diet and exercise routine.` },
+    { id: 3, name: "Sarah Jackson", tag: "@sjackson", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine's Health Status Monitor keeps me informed and motivated. Highly recommended! 👍` },
+    { id: 4, name: "Kevin Roberts", tag: "@kevin_r", profile: "/assets/images/logo_black_white_circle.png", message: `I've tried several health apps, but Plaine's Medicine Tracker stands out for its simplicity and effectiveness. Kudos! 👏` },
+    { id: 5, name: "Emily Davis", tag: "@em_davis", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine's Medical Report Analysis has streamlined my health management significantly.` },
+    { id: 6, name: "Jason Adams", tag: "@jasonA", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine's AI-powered health insights have exceeded our expectations. They truly understand our needs.` },
+    { id: 7, name: "Jessica White", tag: "@jess_w", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine's personalized health approach sets them apart. They genuinely care about their users' wellbeing 🚀.` },
 ];
 
 const LEFT_REVIEW = [
-    { id: 1, name: "Amanda Parker", tag: "@amandap", profile: "/assets/images/reviews/girl5.jpg", message: `I've been blown away by the level of health insights from Plaine 🚀 The AI Health Consult is a game-changer!` },
-    { id: 2, name: "Tyler Johnson", tag: "@tyler_j", profile: "/assets/images/reviews/boy4.jpg", message: `The user interface of Plaine's Medicine Tracker is so intuitive, it's like second nature to use it. 👌` },
-    { id: 3, name: "Natalie Brown", tag: "@nat_b", profile: "/assets/images/reviews/girl6.jpg", message: `Plaine has revolutionized my health routine. The personalized recommendations are spot on! 💼` },
-    { id: 4, name: "Ryan Smith", tag: "@ryanS", profile: "/assets/images/reviews/boy5.jpg", message: `Kudos to Plaine for their innovative health solutions. The Health Status Monitor is fantastic! 🌟` },
-    { id: 5, name: "Sophie Williams", tag: "@sophie_w", profile: "/assets/images/reviews/girl7.jpg", message: `Using Plaine's Medical Report Analysis feels like having a personal doctor. It's that good! 💪` },
-    { id: 6, name: "Matthew Davis", tag: "@matt_d", profile: "/assets/images/reviews/boy6.jpg", message: `We've tried other health apps, but nothing compares to the reliability and efficiency of Plaine. 👍` },
-    { id: 7, name: "Emma Martinez", tag: "@emma_m", profile: "/assets/images/reviews/girl8.jpg", message: `Plaine understands our health needs like no other app. Their personalized approach is a game-changer! 🎮` },
+    { id: 1, name: "Amanda Parker", tag: "@amandap", profile: "/assets/images/logo_black_white_circle.png", message: `I've been blown away by the level of health insights from Plaine 🚀 The AI Health Consult is a game-changer!` },
+    { id: 2, name: "Tyler Johnson", tag: "@tyler_j", profile: "/assets/images/logo_black_white_circle.png", message: `The user interface of Plaine's Medicine Tracker is so intuitive, it's like second nature to use it. 👌` },
+    { id: 3, name: "Natalie Brown", tag: "@nat_b", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine has revolutionized my health routine. The personalized recommendations are spot on! 💼` },
+    { id: 4, name: "Ryan Smith", tag: "@ryanS", profile: "/assets/images/logo_black_white_circle.png", message: `Kudos to Plaine for their innovative health solutions. The Health Status Monitor is fantastic! 🌟` },
+    { id: 5, name: "Sophie Williams", tag: "@sophie_w", profile: "/assets/images/logo_black_white_circle.png", message: `Using Plaine's Medical Report Analysis feels like having a personal doctor. It's that good! 💪` },
+    { id: 6, name: "Matthew Davis", tag: "@matt_d", profile: "/assets/images/logo_black_white_circle.png", message: `We've tried other health apps, but nothing compares to the reliability and efficiency of Plaine. 👍` },
+    { id: 7, name: "Emma Martinez", tag: "@emma_m", profile: "/assets/images/logo_black_white_circle.png", message: `Plaine understands our health needs like no other app. Their personalized approach is a game-changer! 🎮` },
 ];
 
 const Review = () => {
@@ -76,13 +74,13 @@ const Review = () => {
                     <p className='text-neutral-500 text-center'>ABOUT US</p>
                 </div>
 
-                <div className="max-w-[90rem] w-full flex -translate-x-96 overflow- mb-5 z-10">
+                <div className="max-w-[90rem] w-full flex -translate-x-96 mb-5 z-10">
                     <div className="flex gap-5 w-[calc(384*7)]">
                         {
                             RIGHT_REVIEW.map((user) => (
                                 <div key={user.id} className="slideRight hover:bg-white/75 w-96 h-48 flex flex-col gap-4 rounded-lg bg-white border p-5 text-black">
                                     <div className="flex gap-3 items-center">
-                                        <Image src={user.profile} width={40} height={40} alt='profile' className='rounded-full' />
+                                        <Image src={user.profile} width={100} height={100} alt='profile' className='rounded-full w-10 h-10 border border-neutral-200' />
                                         <div className="flex flex-col">
                                             <span className='font-medium'>{user.name}</span>
                                             <span className='font-medium text-neutral-400 text-xs'>{user.tag}</span>
@@ -94,13 +92,13 @@ const Review = () => {
                         }
                     </div>
                 </div>
-                <div className="max-w-[90rem] w-full flex -translate-x-[30rem] overflow-  ">
+                <div className="max-w-[90rem] w-full flex -translate-x-[30rem]">
                     <div className="flex gap-5 w-[calc(320*7)] ">
                         {
                             LEFT_REVIEW.map((user) => (
                                 <div key={user.id} className="slideLeft hover:bg-white/75 w-96 h-48 flex flex-col gap-4 rounded-lg bg-white border p-5 text-black">
                                     <div className="flex gap-3 items-center">
-                                        <Image src={user.profile} width={40} height={40} alt='profile' className='rounded-full' />
+                                        <Image src={user.profile} width={100} height={100} alt='profile' className='rounded-full w-10 h-10 border border-neutral-200' />
                                         <div className="flex flex-col">
                                             <span className='font-medium'>{user.name}</span>
                                             <span className='font-medium text-neutral-400 text-xs'>{user.tag}</span>
@@ -112,7 +110,6 @@ const Review = () => {
                         }
                     </div>
                 </div>
-
 
                 {/* Overlay */}
                 <h4 className='font-extrabold text-neutral-400 opacity-20 text-9xl absolute top-20 select-none'>WHY US</h4>

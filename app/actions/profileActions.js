@@ -126,7 +126,7 @@ export async function updateRecords(records) {
             await session.withTransaction(async () => {
                 await Record.create([updatedRecords], { session });
                 await User.updateOne({ user_id }, { is_first_login: false }, { session });
-                await Plan.create({ user_id, plans: [] }, { session });
+                await Plan.create([{ user_id, plans: [] }], { session });
             })
             await session.endSession();
 

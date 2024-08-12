@@ -101,10 +101,10 @@ const Hero = ({ session }) => {
                         width={1080}
                         height={1080}
                         alt="char"
-                        className="w-[25rem] aspect-square select-none"
+                        className="w-[25rem] z-[1] aspect-square select-none"
                     />
 
-                    <div className="absolute -top-5 flex flex-col gap-1">
+                    <div className="absolute z-[2] -top-5 flex flex-col gap-1">
                         <span className="text-sm font-bold">Health Status</span>
                         <div className="flex gap-6 items-center">
                             <div className="border rounded-xl border-neutral-400 flex items-center justify-center p-5 bg-white cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 ">
@@ -115,7 +115,7 @@ const Hero = ({ session }) => {
                         </div>
                     </div>
 
-                    <div ref={obj1} className="absolute bg-white left-10 -z-10 top-36 -rotate-6 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg border border-neutral-400 p-4">
+                    <div ref={obj1} className="absolute bg-white left-10 top-36 -rotate-6 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg border border-neutral-400 p-4">
                         <Image src={"/assets/icons/drug.png"} width={445} height={445} alt="drugs" className="w-28 aspect-square rounded-xl border border-neutral-300 "/>
                         <h2 className="text-sm font-bold mt-2">My Drugs</h2>
                         <div className="flex flex-col justify-between h-full gap-2">
@@ -124,7 +124,7 @@ const Hero = ({ session }) => {
                         </div>
                     </div>
 
-                    <div ref={obj2} className="absolute bg-white right-2 top-52 rotate-12 scale-110 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg break-words border border-neutral-400 p-4">
+                    <div ref={obj2} className="absolute bg-white right-2 top-52 z-[2] rotate-12 scale-110 h-fit cursor-pointer md:hover:border-neutral-800 md:active:scale-95 duration-300 flex flex-col rounded-lg break-words border border-neutral-400 p-4">
                         <div className="w-32 aspect-square rounded-xl border border-neutral-300 flex items-center justify-center">
                             <Image src={"/assets/icons/folders.png"} width={445} height={445} alt="drugs" className="w-20"/>
                         </div>

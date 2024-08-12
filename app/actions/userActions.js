@@ -24,7 +24,7 @@ export async function updatePotentialHealthIssues() {
         const prompt =
             `Here is user information:
             Name: ${record?.username || "User"}
-            Age: ${record?.birthdate ? calculateAge(birthdate) + " years old" : "Not Provided"}
+            Age: ${record?.birthdate ? calculateAge(record?.birthdate) + " years old" : "Not Provided"}
             Gender: ${record?.gender}
             Height: ${record?.height}
             Weight: ${record?.weight}
@@ -105,7 +105,7 @@ export async function updateAllRecommendations() {
         const prompt =
             `Here is user information:
             Name: ${record?.username || "User"}
-            Age: ${record?.birthdate ? calculateAge(birthdate) + " years old" : "Not Provided"}
+            Age: ${record?.birthdate ? calculateAge(record?.birthdate) + " years old" : "Not Provided"}
             Gender: ${record?.gender}
             Height: ${record?.height}
             Weight: ${record?.weight}
@@ -192,7 +192,7 @@ export async function updateRecommendations(state) {
         const prompt =
             `Here is user information:
             Name: ${record?.username || "User"}
-            Age: ${record?.birthdate ? calculateAge(birthdate) + " years old" : "Not Provided"}
+            Age: ${record?.birthdate ? calculateAge(record?.birthdate) + " years old" : "Not Provided"}
             Gender: ${record?.gender}
             Height: ${record?.height}
             Weight: ${record?.weight}

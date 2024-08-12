@@ -49,7 +49,7 @@ const Page = async () => {
             user.health_issues = resPot.data || [];
         } else {
             user.health_status.status = "0";
-            user.health_status.description = "";
+            user.health_status.description = "Something Went Wrong";
             user.recommendations.food = [];
             user.recommendations.exercise = [];
             user.recommendations.activity = [];

@@ -100,7 +100,7 @@ export async function postMessage(input, chat_id, formData, type) {
         // Construct
         const prompt =
             `Here is user information:
-            age: ${record?.birthdate ? calculateAge(birthdate) + " years old" : "Prefer Not To Say"}
+            age: ${record?.birthdate ? calculateAge(record?.birthdate) + " years old" : "Prefer Not To Say"}
             gender: ${record?.gender}
             height: ${record?.height}
             weight: ${record?.weight}

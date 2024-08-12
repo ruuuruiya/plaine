@@ -37,7 +37,7 @@ export async function getGoalSuggestions(records) {
     // Construct Prompt
     const prompt =
         `Here is user information:
-        age: ${birthdate ? calculateAge(birthdate) + " years old" : "Prefer Not To Say"}
+        age: ${birthdate ? calculateAge(birthdate) + " years old" : "Not Provided"}
         gender: ${gender}
         height: ${height}
         weight: ${weight}
@@ -68,7 +68,7 @@ export async function getGoalSuggestions(records) {
 
         // Parsing Response
         const jsArray = JSON.parse(aiResponseText);
-        if (!Array.isArray(jsArray)) throw new Error('Parsed JSON is not an array');
+        if (!Array.isArray(jsArray) || jsArray.length === 0) throw new Error('Parsed JSON is not a valid array');
         return { success: true, message: "Goal Suggestions Updated", data: jsArray};
     } catch (err) {
         console.log(err.message);
@@ -76,13 +76,13 @@ export async function getGoalSuggestions(records) {
     };
 };
 
-export async function updateRecords(records, from) {
+export async function updateRecords(records) {
 
     const auth_session = await auth();
     if (!auth_session) return { success: false, message: "Unauthorized" };
     const user_id = auth_session?.user?.user_id;
 
-    // redirect throws NEXT_REDIRECT Error, put it outside trycatch
+    // Redirect URL initialization
     let redirectTo = "";
 
     try {
@@ -113,22 +113,24 @@ export async function updateRecords(records, from) {
 
         await connectDB();
 
-        // Check is Updating or Onboarding
+        // Check if updating existing record or onboarding
         const prevRecord = await Record.findOne({ user_id });
         if (prevRecord) {
+            // Update existing record
             await Record.updateOne({ user_id }, updatedRecords);
             redirectTo = '/profile';
         } else {
+            // Onboarding: Create new record, update user, and initialize plans
             records.user_id = user_id;
             const session = await mongoose.startSession();
             await session.withTransaction(async () => {
                 await Record.create([updatedRecords], { session });
                 await User.updateOne({ user_id }, { is_first_login: false }, { session });
+                await Plan.create({ user_id, plans: [] }, { session });
             })
             await session.endSession();
 
-            // Retrieve Information for Dashboard n Initial Plan
-            await Plan.create({ user_id, plans: [] });
+            // Retrieve information for dashboard and initial plan setup
             await Promise.all([
                 updateHealthStatus(),
                 updateAllRecommendations(),

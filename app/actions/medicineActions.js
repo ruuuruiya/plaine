@@ -46,7 +46,7 @@ export async function postMedicine(formData) {
         });
 
         revalidatePath('/medicines');
-        return { success: true, message: "Medicine Created" };
+        return { success: true, message: "Medicine Uploaded" };
     } catch (err) {
         console.log(err.message);
         return { success: false, message: "Internal Server Error" };

@@ -5,7 +5,6 @@ import connectDB from "@/config/db";
 import Feedback from "@/models/feedbackSchema";
 
 export async function postFeedback(feedback) {
-
     const auth_session = await auth();
     if (!auth_session) return { success: false, message: "Unauthorized" };
     const user_id = auth_session?.user?.user_id;

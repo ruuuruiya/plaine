@@ -69,10 +69,6 @@ Before running the application, You will need to:
 4. Push your branch: `git push origin feature-name`.
 5. Create a pull request.
 
-### Main Author
-
-- **Donny Kurniawan** - _Initial work_ - [donnykurniawan3707@gmail.com](mailto:donnykurniawan3707@gmail.com)
-
 ## Acknowledgments
 
 - Thanks to all the developers and contributors who made this project possible.
